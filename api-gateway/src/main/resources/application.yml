@@ -1,0 +1,31 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: api-gateway
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+zuul:
+  routes:
+    activity:
+      path: /activity/**
+        serviceId: activity-service
+    dynamic:
+      path: /dynamic/**
+        serviceId: dynamic-service
+    user:
+      path: /user/**
+        serviceId: user-service
+    cache:
+      path: /cache/**
+        serviceId: cache-service
+    test:
+      path: /test/**
+      serviceId: test-service
+#  ignored-patterns: /user/info,/activity/info

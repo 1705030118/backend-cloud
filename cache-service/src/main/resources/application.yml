@@ -1,0 +1,21 @@
+server:
+  port: 8008
+spring:
+  application:
+    name: cache-service
+  redis:
+    database: 0
+    host: 127.0.0.1
+    password:
+    port: 6379
+    timeout: 1000
+    poolMaxTotal: 1000
+    poolMaxIdle: 500
+    poolMaxWait: 500
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+

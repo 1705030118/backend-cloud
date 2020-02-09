@@ -1,0 +1,21 @@
+server:
+  port: 8019
+spring:
+  application:
+    name: mq-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      direct:
+        default-requeue-rejected: true
+      simple:
+        prefetch: 1
+        auto-startup: true
+    template:
+      retry:
+        enabled: true
+        initial-interval: 2s

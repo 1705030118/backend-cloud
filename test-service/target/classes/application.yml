@@ -1,0 +1,11 @@
+server:
+  port: 8002
+spring:
+  application:
+    name: test-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}

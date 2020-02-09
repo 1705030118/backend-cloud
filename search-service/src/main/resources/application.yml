@@ -1,0 +1,27 @@
+server:
+  port: 8009
+spring:
+  application:
+    name: search-service
+  data:
+    elasticsearch:
+      # 集群名
+      cluster-name: elasticsearch
+      # 连接节点,注意在集群中通信都是9300端口，否则会报错无法连接上！
+      cluster-nodes: localhost:9300,119.29.38.169:9300
+      repositories:
+        # 仓库中数据存储
+        enabled: true
+#pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  returnPageInfo: check
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
