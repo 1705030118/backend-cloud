@@ -15,10 +15,16 @@
 - 查找文件
 find / -name nginx.conf
 ```
-limit_req_zone $binary_remote_addr zone=ttlsa_com:10m rate=1r/s;
-server {
-    location /www.ttlsa.com/ {
-        limit_req zone=ttlsa_com burst=5;
+http {
+	upstream server1 {    
+        server  192.168.164.129:9999;
+        server  192.168.164.134:9999;
+       }
+    limit_req_zone $binary_remote_addr zone=one:10m rate=1r/s;
+    server {
+        location /search/ {
+            limit_req zone=one burst=5;
+        }
     }
 }
 ```
