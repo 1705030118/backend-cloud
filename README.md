@@ -35,6 +35,7 @@ public class ExecutorConfig {
 ### HashMap做内存标记
 ### 使用Spring的AOP实现日志管理
 ### Redis的zset实现简单限流
+### Redis实现session共享
 ### Elasticsearch实现搜索，日志收集
 ### Nginx负载均衡、limit_req限制用户请求速率
 ```
@@ -51,15 +52,22 @@ http {
     }
 }
 ```
-## TODO
+## EXPLAIN慢查询
+### type列
+### 
 ### Linux命令
 - 查找文件
-find / -name nginx.conf
-- 查看文件内容
-- cat nginx.conf（一次性显示整个文件内容）
+
+find / -name nginx.conf	
+- 查看文件内容	
+cat nginx.conf（一次性显示整个文件内容）
+
 - 查看文件内容（倒序）
-- tail -n 2 nginx.conf（查看文件的最后2行内容）
+
+tail -n 2 nginx.conf（查看文件的最后2行内容）
 - 查看文件内容
+
 less nginx.conf（搜索功能）
 - 查看文件内容
+
 more -3 nginx.conf（一次显示3行）
