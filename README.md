@@ -68,6 +68,5 @@ tail -n 2 nginx.conf（查看文件的最后2行内容）
 - 查看文件内容
 
 less nginx.conf（搜索功能）
-- 查看文件内容
-
+- 查看文件内容<br>
 more -3 nginx.conf（一次显示3行）
