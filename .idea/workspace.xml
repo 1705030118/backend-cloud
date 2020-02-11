@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fadbed3-9671-437c-b00a-06039a233cd8" name="Default Changelist" comment="AOP日志管理+线程池">
-      <change afterPath="$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/MyTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="4fadbed3-9671-437c-b00a-06039a233cd8" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/api-gateway/target/" />
@@ -47,15 +41,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/AsyncServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/ExecutorConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
@@ -88,11 +73,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/AdvanceNotice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state relative-caret-position="208">
+              <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#209#210#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/CacheServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -166,8 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/api/ActivityService.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/api/SearchService.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/domain/UserDomain.java" />
         <option value="$PROJECT_DIR$/dynamic-service/src/main/java/com/ldm/dynamic/User.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/ldm/user/User.java" />
@@ -217,6 +217,8 @@
         <option value="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/MyTask.java" />
+        <option value="$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/CacheServiceApplication.java" />
+        <option value="$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/AdvanceNotice.java" />
       </list>
     </option>
   </component>
@@ -541,7 +543,7 @@
       <workItem from="1578557244002" duration="1345000" />
       <workItem from="1578674309388" duration="156000" />
       <workItem from="1578674758919" duration="70000" />
-      <workItem from="1580899971586" duration="54532000" />
+      <workItem from="1580899971586" duration="54809000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1581231429911</created>
@@ -592,11 +594,18 @@
       <option name="project" value="LOCAL" />
       <updated>1581269530551</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Spring Task定时任务">
+      <created>1581425314380</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581425314380</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71827000" />
+    <option name="totallyTimeSpent" value="72104000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -609,9 +618,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987715" visible="true" weight="0.25378788" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987715" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" sideWeight="0.5012285" side_tool="true" weight="0.25378788" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -633,7 +641,7 @@
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32894737" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32838285" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.32838285" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="14" visible="true" weight="0.32838285" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -678,16 +686,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="AOP日志管理+线程池" />
-    <option name="LAST_COMMIT_MESSAGE" value="AOP日志管理+线程池" />
+    <MESSAGE value="Spring Task定时任务" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Task定时任务" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ldm/domain/DynamicDomain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ldm/domain/ActivityDomain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1118,8 +1120,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/AdvanceNotice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="208">
+          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/CacheServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
