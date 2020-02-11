@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fadbed3-9671-437c-b00a-06039a233cd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/AnnotationAopConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/AnnotationLogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/AnnotationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/AsyncServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/Log.java" afterDir="false" />
+    <list default="true" id="4fadbed3-9671-437c-b00a-06039a233cd8" name="Default Changelist" comment="AOP日志管理+线程池">
+      <change afterPath="$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/MyTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/AsyncService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/AsyncService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/ExecutorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/ExecutorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,42 +33,15 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/TestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/AnnotationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/AnnotationLogAspect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-443">
-              <caret line="17" column="93" selection-start-line="17" selection-start-column="93" selection-end-line="17" selection-end-column="93" />
+            <state relative-caret-position="223">
+              <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1641#1642#0" expanded="true" />
                 <element signature="e#1687#1688#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/ActivityController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -88,40 +56,78 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/Log.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/DynamicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/AsyncService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/ExecutorConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-131">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="18">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar!/org/springframework/scheduling/concurrent/ThreadPoolTaskExecutor.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="319">
+                <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/AdvanceNotice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#830#831#0" expanded="true" />
+                <element signature="e#924#925#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/ldm/user/HttpUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-180">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -160,8 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/request/LoginRequest.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/api/ActivityService.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/api/SearchService.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/domain/UserDomain.java" />
@@ -190,10 +194,8 @@
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/util/JsonUtil.java" />
         <option value="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MQConfig.java" />
-        <option value="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java" />
         <option value="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqConsumer.java" />
         <option value="$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/CacheServiceImpl.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java" />
         <option value="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/SystemControllerLog.java" />
         <option value="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/Log.java" />
         <option value="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/LogService.java" />
@@ -211,6 +213,10 @@
         <option value="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/AsyncServiceImpl.java" />
         <option value="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/AsyncService.java" />
         <option value="$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/AnnotationLogAspect.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java" />
+        <option value="$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/MyTask.java" />
       </list>
     </option>
   </component>
@@ -281,79 +287,58 @@
             <path>
               <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="cache-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cache-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
+              <item name="cache-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="cache-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ldm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="cache-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ldm" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="cache-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="ldm" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="aop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="cache-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="ldm" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="async" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nginx-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nginx-cloud" type="462c0819:PsiDirectoryNode" />
-              <item name="api-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -556,7 +541,7 @@
       <workItem from="1578557244002" duration="1345000" />
       <workItem from="1578674309388" duration="156000" />
       <workItem from="1578674758919" duration="70000" />
-      <workItem from="1580899971586" duration="49388000" />
+      <workItem from="1580899971586" duration="54532000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1581231429911</created>
@@ -600,11 +585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1581259754320</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="AOP日志管理+线程池">
+      <created>1581269530551</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1581269530551</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66683000" />
+    <option name="totallyTimeSpent" value="71827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -617,6 +609,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987715" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" sideWeight="0.5012285" side_tool="true" weight="0.25378788" />
@@ -684,39 +677,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="AOP日志管理+线程池" />
+    <option name="LAST_COMMIT_MESSAGE" value="AOP日志管理+线程池" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/ldm/user/MD5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#301#302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-service/src/main/java/com/ldm/dynamic/DynamicDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-service/src/main/java/com/ldm/dynamic/DynamicServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ldm/domain/DynamicDomain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -728,19 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/ldm/user/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2996#3011#0" expanded="true" />
-            <element signature="e#9546#9547#0" expanded="true" />
-            <element signature="e#9597#9598#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -913,16 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -937,13 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1090,16 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/ExecutorConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/Log.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1126,13 +1050,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/aop/AnnotationLogAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-443">
-          <caret line="17" column="93" selection-start-line="17" selection-start-column="93" selection-end-line="17" selection-end-column="93" />
+        <state relative-caret-position="223">
+          <caret line="54" column="39" lean-forward="true" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1641#1642#0" expanded="true" />
             <element signature="e#1687#1688#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ldm/api/MqService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mq-service/src/main/java/com/ldm/mq/MqServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/ldm/user/HttpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/ExecutorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.9.RELEASE/spring-context-5.1.9.RELEASE.jar!/org/springframework/scheduling/concurrent/ThreadPoolTaskExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="129" column="35" selection-start-line="129" selection-start-column="35" selection-end-line="129" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="319">
+            <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache-service/src/main/java/com/ldm/cache/AdvanceNotice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
