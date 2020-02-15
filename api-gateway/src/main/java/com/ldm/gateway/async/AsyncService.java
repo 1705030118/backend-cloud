@@ -1,5 +1,7 @@
 package com.ldm.gateway.async;
 
+import com.ldm.domain.LogDomain;
+
 public interface AsyncService {
     /**
      *  执行异步任务
@@ -9,9 +11,9 @@ public interface AsyncService {
     /**
      * 新增系统日志
      */
-    void createLog(Log log);
+    void createLog(LogDomain log);
     /**
      * 更新系统日志
      */
-    void updateLog(Log log);
+    void updateLog(LogDomain log);
 }

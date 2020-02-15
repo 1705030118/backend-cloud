@@ -1,6 +1,9 @@
 # backend-cloud
 基于Spring Cloud的APP后端
 ## 项目难点（如何解决）
+- 安全性
+- Elasticsearch分词效果
+- 线程池参数设置
 ## 项目亮点
 ### 线程池优化
 ```
@@ -35,9 +38,32 @@ public class ExecutorConfig {
 ### 搭建Redis Cluster集群
 ### 使用Spring的AOP实现日志管理
 ### Redis的zset实现简单限流
+## 阅读zset源码
 ### Redis实现session共享
+> uni-app 中不支持读写 cookie，所以不能如传统的应用那样通过读取 cookie 来判断是否是登录状态。Redis存储token(使用UUID生成)
+`````$xslt
+header: {  
+    "Content-Type": "application/x-www-form-urlencoded",  
+    "Token":res.data.token  
+}
+`````
 ### Spring Task定时任务
 ### Elasticsearch实现搜索，日志收集
+## 分词器的配置
+```$xslt
+{
+    "analyzer": "standard",
+    "text": "哪吒之魔童降世"
+}
+哪 吒 之 魔 童 降 世
+```
+```$xslt
+{
+    "analyzer": "ik_max_word",
+    "text": "哪吒之魔童降世"
+}
+哪吒 之 魔 童 降世
+```
 ### Nginx负载均衡、limit_req限制用户请求速率
 ```
 http {
@@ -53,6 +79,20 @@ http {
     }
 }
 ```
+### SQL优化
+```
+EXPLAIN SELECT COUNT(*) FROM t_activity
+```
+type：index
+rows：119375
+key：index_user_id
+```$xslt
+EXPLAIN SELECT COUNT(*) FROM t_activity WHERE publish_time>'2019-09-18 06:26:00'
+```
+type：range
+rows：59687
+key：index_publish_time
+time：0.064
 ### Linux命令
 - 查找文件
 
@@ -69,3 +109,24 @@ less nginx.conf（搜索功能）
 - 查看文件内容
 
 more -3 nginx.conf（一次显示3行）
+- 查看占用端口的进程
+
+netstat -anp | grep 3306 | awk '{print $7}'
+- 查看当前路径
+
+pwd
+- 生成一个空文件
+
+touch test.conf
+- mkdir test
+
+创建一个目录
+- vim常用命令
+
+查看并替换：%s/oldword/newword/g
+
+查找： /word
+
+删除多行：9,10d(按u撤销)
+
+批量注释：3,4s#^#//#g

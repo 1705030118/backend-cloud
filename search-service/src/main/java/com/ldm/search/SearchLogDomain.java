@@ -1,9 +1,13 @@
-package com.ldm.gateway.async;
+package com.ldm.search;
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
 
 @Data
-public class Log {
+@Document(indexName = "app",type = "log")
+public class SearchLogDomain{
+    @Id
     private int logId;
     private int userId;
     private String type;
