@@ -18,6 +18,13 @@
         <module>api-gateway</module>
         <module>eureka-server</module>
         <module>test-service</module>
+        <module>activity-service</module>
+        <module>cache-service</module>
+        <module>chat-service</module>
+        <module>dynamic-service</module>
+        <module>search-service</module>
+        <module>mq-service</module>
+        <module>user-service</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

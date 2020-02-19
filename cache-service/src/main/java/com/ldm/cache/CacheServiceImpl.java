@@ -1,6 +1,5 @@
 package com.ldm.cache;
 
-import com.alibaba.fastjson.JSON;
 import com.ldm.api.CacheService;
 import com.ldm.util.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;

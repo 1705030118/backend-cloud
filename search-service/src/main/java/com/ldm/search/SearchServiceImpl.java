@@ -12,14 +12,16 @@ import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-
+@RefreshScope
+@RestController
 public class SearchServiceImpl implements SearchService {
     @Autowired
     private SearchDao searchDao;
@@ -80,27 +82,22 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public void save(SearchActivityDomain searchActivityDomain) {
-        searchDao.save(searchActivityDomain);
+        searchDao.save(SearchDomain.transform(searchActivityDomain));
     }
 
     @Override
-    public void delete(SearchActivityDomain searchActivityDomain) {
-        searchDao.delete(searchActivityDomain);
-    }
-
-    @Override
-    public Optional<SearchActivityDomain> findById(int activityId) {
-        return searchDao.findById(activityId);
+    public void deleteActivity(SearchActivityDomain searchActivityDomain) {
+        searchDao.delete(SearchDomain.transform(searchActivityDomain));
     }
 
     @Override
     public void createLog(LogDomain log) {
-        searchLogDao.save(log);
+        searchLogDao.save(SearchLogDomain.transform(log));
     }
 
     @Override
     public void updateLog(LogDomain log) {
-        searchLogDao.delete(log);
-        searchLogDao.save(log);
+        searchLogDao.delete(SearchLogDomain.transform(log));
+        searchLogDao.save(SearchLogDomain.transform(log));
     }
 }

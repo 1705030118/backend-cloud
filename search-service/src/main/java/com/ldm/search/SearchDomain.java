@@ -18,12 +18,24 @@ public class SearchDomain {
     @Field(analyzer = "ik_max_word")
     private String locationName;
     private String publishTime;
-//    public SearchDomain(SearchActivityDomain searchActivityDomain){
-//        setActivityId(searchActivityDomain.getActivityId());
-//        setUserId(searchActivityDomain.getUserId());
-//        setPublishTime(searchActivityDomain.getPublishTime());
-//        setActivityType(searchActivityDomain.getActivityType());
-//        setActivityName(searchActivityDomain.getActivityName());
-//        setLocationName(searchActivityDomain.getLocationName());
-//    }
+    public static SearchDomain transform(SearchActivityDomain searchActivityDomain){
+        SearchDomain searchDomain=new SearchDomain();
+        searchDomain.setActivityId(searchActivityDomain.getActivityId());
+        searchDomain.setUserId(searchActivityDomain.getUserId());
+        searchDomain.setPublishTime(searchActivityDomain.getPublishTime());
+        searchDomain.setActivityType(searchActivityDomain.getActivityType());
+        searchDomain.setActivityName(searchActivityDomain.getActivityName());
+        searchDomain.setLocationName(searchActivityDomain.getLocationName());
+        return searchDomain;
+    }
+    public static SearchActivityDomain transform2(SearchDomain searchDomain){
+        SearchActivityDomain searchActivityDomain=new SearchActivityDomain();
+        searchActivityDomain.setActivityId(searchDomain.getActivityId());
+        searchActivityDomain.setUserId(searchDomain.getUserId());
+        searchActivityDomain.setPublishTime(searchDomain.getPublishTime());
+        searchActivityDomain.setActivityType(searchDomain.getActivityType());
+        searchActivityDomain.setActivityName(searchDomain.getActivityName());
+        searchActivityDomain.setLocationName(searchDomain.getLocationName());
+        return searchActivityDomain;
+    }
 }

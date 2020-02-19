@@ -10,4 +10,14 @@ public class ActivityDomain {
     private String locationName;
     private String publishTime;
     private String userNickname;
+    public SearchActivityDomain transform(){
+        SearchActivityDomain searchActivityDomain=new SearchActivityDomain();
+        searchActivityDomain.setActivityId(activityId);
+        searchActivityDomain.setActivityName(activityName);
+        searchActivityDomain.setActivityType(activityType);
+        searchActivityDomain.setActivityType(activityType);
+        searchActivityDomain.setPublishTime(publishTime);
+        searchActivityDomain.setUserId(userId);
+        return searchActivityDomain;
+    }
 }

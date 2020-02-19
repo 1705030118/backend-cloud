@@ -12,7 +12,7 @@ public class LogDomain implements Serializable {
     private static final long serialVersionUID = 1L;
     private int logId;
     private int userId;
-    private String type;
+    private String logType;
     private String title;
     private String url;
     private String method;

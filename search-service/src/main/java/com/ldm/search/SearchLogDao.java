@@ -3,5 +3,5 @@ package com.ldm.search;
 import com.ldm.domain.LogDomain;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
-public interface SearchLogDao  extends ElasticsearchRepository<LogDomain,Integer> {
+public interface SearchLogDao  extends ElasticsearchRepository<SearchLogDomain,Integer> {
 }

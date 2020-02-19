@@ -13,6 +13,24 @@ eureka:
     instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}
 zuul:
   routes:
+    activity:
+      path: /activity/**
+      serviceId: activity-service
+    dynamic:
+      path: /dynamic/**
+      serviceId: dynamic-service
+    user:
+      path: /user/**
+      serviceId: user-service
+    cache:
+      path: /cache/**
+      serviceId: cache-service
+    search:
+      path: /search/**
+      serviceId: search-service
+    mq:
+      path: /mq/**
+      serviceId: mq-service
     test:
       path: /test/**
       serviceId: test-service

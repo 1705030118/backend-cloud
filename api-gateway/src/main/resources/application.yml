@@ -15,16 +15,22 @@ zuul:
   routes:
     activity:
       path: /activity/**
-        serviceId: activity-service
+      serviceId: activity-service
     dynamic:
       path: /dynamic/**
-        serviceId: dynamic-service
+      serviceId: dynamic-service
     user:
       path: /user/**
-        serviceId: user-service
+      serviceId: user-service
     cache:
       path: /cache/**
-        serviceId: cache-service
+      serviceId: cache-service
+    search:
+      path: /search/**
+      serviceId: search-service
+    mq:
+      path: /mq/**
+      serviceId: mq-service
     test:
       path: /test/**
       serviceId: test-service
