@@ -2,11 +2,27 @@
 ### 3.1 netty-socketio实现私聊和群聊
 > netty-socketio是一个开源的、基于Netty的、Java版的即时消息推送项目
 #### 3.1.2 netty组件
-- Channel-socket
-- EventLoop-控制流、多线程处理、并发
-> 用于处理连接的生命周期中所发生的事件
+- Channel
+> 一个 Channel 在它的生命周期内只能注册与一个 EventLoop
+- EventLoop
+> 用于处理连接的生命周期中所发生的事件,一个 EventLoop 在它的生命周期内只能与一个Thread绑定。
+- BossEventLoopGroup和WorkerEventLoopGroup
+> 通常是一个单线程的 EventLoop，EventLoop 维护着一个注册了 ServerSocketChannel 的 Selector 实例,所以通常可以将 BossEventLoopGroup 的线程数参数为 1。
+
+BossEventLoop 只负责处理连接，故开销非常小，连接到来，马上按照策略将 SocketChannel 转发给 WorkerEventLoopGroup，WorkerEventLoopGroup 会由 next 选择其中一个 EventLoop 来将这 个SocketChannel 注册到其维护的 Selector 并对其后续的 IO 事件进行处理。
 - ChannelFuture-异步通知
 > netty中所有的I/O操作都是异步的
+
+Netty 为异步非阻塞，即所有的 I/O 操作都为异步的，因此，我们不能立刻得知消息是否已经被处理了。Netty 提供了 ChannelFuture 接口，通过该接口的 addListener() 方法注册一个 ChannelFutureListener，当操作执行成功或者失败时，监听就会自动触发返回结果。
+- ChannelHandler
+
+ChannelHandler 为 Netty 中最核心的组件，它充当了所有处理入站和出站数据的应用程序逻辑的容器。ChannelHandler 主要用来处理各种事件，这里的事件很广泛，比如可以是连接、数据接收、异常、数据转换等。
+##### 3.1.2.1 总结
+1、NioEventLoopGroup 实际上就是个线程池，一个 EventLoopGroup 包含一个或者多个 EventLoop  
+2、一个 EventLoop 在它的生命周期内只和一个 Thread 绑定  
+3、所有有 EnventLoop 处理的 I/O 事件都将在它专有的 Thread 上被处理  
+4、一个 Channel 在它的生命周期内只注册于一个 EventLoop  
+5、每一个 EventLoop 负责处理一个或多个 Channel
 ### 3.2 使用Sharding-JDBC实现MySQL读写分离
 > 面对日益增加的系统访问量，数据库的吞吐量面临着巨大瓶颈。 对于同一时间有大量并发读操作和较少写操作类型的应用系统来说，将单一的数据库拆分为主库和从库，主库负责处理事务性的增删改操作，从库负责处理查询操作，能够有效的避免由数据更新导致的行锁，使得整个系统的查询性能得到极大的改善。 通过一主多从的配置方式，可以将查询请求均匀的分散到多个数据副本，能够进一步的提升系统的处理能力。 使用多主多从的方式，不但能够提升系统的吞吐量，还能够提升系统的可用性，可以达到在任何一个数据库宕机，甚至磁盘物理损坏的情况下仍然不影响系统的正常运行。
 虽然读写分离可以提升系统的吞吐量和可用性，但同时也带来了数据不一致的问题，这包括多个主库之间的数据一致性，以及主库与从库之间的数据一致性的问题。并且，读写分离也带来了与数据分片同样的问题，它同样会使得应用开发和运维人员对数据库的操作和运维变得更加复杂。透明化读写分离所带来的影响，让使用方尽量像使用一个数据库一样使用主从数据库，是读写分离中间件的主要功能。
