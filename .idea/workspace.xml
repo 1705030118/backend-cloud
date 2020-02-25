@@ -62,24 +62,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project-done.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="18">
-                <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="184">
+                <caret line="281" selection-start-line="281" selection-end-line="281" />
+                <folding>
+                  <element signature="e#210#211#0" expanded="true" />
+                  <element signature="e#262#263#0" expanded="true" />
+                  <element signature="e#455#456#0" expanded="true" />
+                  <element signature="e#529#530#0" expanded="true" />
+                </folding>
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project-hard.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="252">
-                <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+                <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               </first_editor>
               <second_editor />
             </state>
@@ -204,9 +210,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="40" />
-    <option name="y" value="169" />
-    <option name="width" value="1346" />
+    <option name="x" value="486" />
+    <option name="y" value="189" />
+    <option name="width" value="841" />
     <option name="height" value="688" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -538,7 +544,7 @@
       <workItem from="1581690848282" duration="735000" />
       <workItem from="1581788478713" duration="4529000" />
       <workItem from="1581833872626" duration="8980000" />
-      <workItem from="1582043915651" duration="28472000" />
+      <workItem from="1582043915651" duration="32043000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1581231429911</created>
@@ -624,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582129092812</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update readme">
+      <created>1582292246262</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582292246262</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -660,7 +673,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131102000" />
+    <option name="totallyTimeSpent" value="134673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -674,8 +687,8 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48844886" visible="true" weight="0.4659091" />
-      <window_info id="Structure" order="1" sideWeight="0.51155114" side_tool="true" visible="true" weight="0.4659091" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48349836" visible="true" weight="0.4659091" />
+      <window_info id="Structure" order="1" sideWeight="0.51650167" side_tool="true" visible="true" weight="0.4659091" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -757,9 +770,9 @@
     <MESSAGE value="AOP日志管理+线程池" />
     <MESSAGE value="Spring Task定时任务" />
     <MESSAGE value="elasticsearch日志收集" />
-    <MESSAGE value="update readme" />
     <MESSAGE value="update readme and project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme and project structure" />
+    <MESSAGE value="update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mq-service/src/main/resources/application.yml">
@@ -1118,23 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/ExecutorConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project-hard.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="252">
-            <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project-highlight.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -1145,11 +1141,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api-gateway/src/main/java/com/ldm/gateway/async/ExecutorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project-done.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="18">
-            <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="184">
+            <caret line="281" selection-start-line="281" selection-end-line="281" />
+            <folding>
+              <element signature="e#210#211#0" expanded="true" />
+              <element signature="e#262#263#0" expanded="true" />
+              <element signature="e#455#456#0" expanded="true" />
+              <element signature="e#529#530#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project-hard.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="252">
+            <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           </first_editor>
           <second_editor />
         </state>
